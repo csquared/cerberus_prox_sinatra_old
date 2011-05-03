@@ -1,0 +1,13 @@
+<form method="POST" action="/cardholder/new">
+  
+  <label>Nick:</label>
+  <input type="text" name="nick" />
+  <br />
+  <label>Name:</label>
+  <input type="text" name="user" />
+  <br/>
+  <label>Card ID:</label>
+  <input type="text" name="card_id" value="<%=(10000 * rand).to_i%>"  />
+  <br />
+  <input type="submit" />
+</form>

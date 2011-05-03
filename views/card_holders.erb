@@ -1,0 +1,13 @@
+<ul id=cards>
+ <% @cards.each do |card| %> 
+  <li>
+    <% status = card[:disabled] == 'N' ? 'enabled' : 'disabled'%>
+    <span class="<%=status%>">
+      <%=status%>
+    </span>
+    <%=card[:user]%> - <%=card[:nick]%> 
+    <a href="/cardholder/delete/<%=card[:card_id]%>">delete</a>
+  </li>
+ <% end %>
+</ul>
+<a href="/cardholder/new">New Cardholder</a>
